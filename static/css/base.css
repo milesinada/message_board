@@ -1,0 +1,29 @@
+h1{
+    text-align: center;
+    color: white;
+}
+body{
+    background: url("/static/img/gamepaper.PNG") repeat;
+    color: white;
+}
+.welcome{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: middle;
+}
+.welcome p{
+    max-width: 600px;
+}
+.img-box{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: middle;
+}
+.img-box img{
+    height: 700px;
+    width: auto;
+}

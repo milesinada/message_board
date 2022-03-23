@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+
+
+{% block content %}
+
+    <h1>Hello, Gamers!</h1>
+    <div class="welcome">
+        <p>Welcome to the ultimate hidden loot message board! Help out fellow gamers here by adding intel of hidden in game loot spots, easter eggs, or whatever the average player would miss!</p>
+    </div>
+    <div class="img-box">
+        <img src="{% static 'img/dinnerbone.PNG' %}" alt="">
+    </div>
+{% endblock content %}
