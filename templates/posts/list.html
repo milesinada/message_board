@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Posts{% endblock title %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/list.css' %}">
 <h1>Games</h1>
-<table class="table">
+<table class="table table-dark">
     <thead>
         <tr>
-            <th scope="col">#</th>
             <th scope="col">Game</th>
             <th scope="col">Location</th>
             <th scope="col">Gamer Tag</th>
@@ -16,24 +17,25 @@
     <tbody>
     {% for post in post_list %}
       <tr>
-        <th scope="row">{{ post.id }}</th>
         <td><a href="{% url 'post_detail' post.id %}">
-            {{ post.title }}
+            {{ post.game }}
         </a></td>
         <td>{{ post.location }}</td>
         <td>{{ post.gamer }}</td>
       </tr>
-    {% endfor %}
     </tbody>
-  </table>
-<ul>
-    {% for post in post_list %}
-        <li>
-            <a href="{% url 'post_detail' post.id %}">
-                {{ post.title }}
-            </a>
-        </li>
     {% endfor %}
-</ul>
+</table>
+{% for post in post_list %}
+<div class="cards">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title text-dark">Game: {{ post.game }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted text-dark">Location: {{ post.location }}</h6>
+            <a href="{% url 'post_detail' post.id %} " class="card-link text-dark">Details</a>
+        </div>
+    </div>
+</div>
+{% endfor %}
 
 {% endblock content %}

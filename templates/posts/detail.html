@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    {{ post.title }}
+    {{ post.game }}
 {% endblock title %}
 
 {% block content %}
-    <h1>{{ post.title }}</h1>
+    <h1>{{ post.game }}</h1>
     <p>{{ post.text }}</p>
+    <h6>Posted by {{ post.gamer }}</h6>
     <a href="{% url 'posts_list' %}">Back</a> |
     <a href="{% url 'post_edit' post.id %}">Edit Post</a> |
     <a href="{% url 'post_delete' post.id %}">Delete</a>

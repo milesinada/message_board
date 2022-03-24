@@ -20,12 +20,12 @@ class PostDetailView(DetailView):
 class PostCreateView(CreateView):
     template_name = "posts/new.html"
     model = Post
-    fields = ['title', 'text', 'location', 'gamer']
+    fields = ['game', 'text', 'location', 'gamer']
 
 class PostUpdateView(UpdateView):
     template_name = "posts/edit.html"
     model = Post
-    fields = ['title', 'text', 'location', 'gamer']
+    fields = ['game', 'text', 'location', 'gamer']
 
 class PostDeleteView(DeleteView):
     template_name = "posts/delete.html"
